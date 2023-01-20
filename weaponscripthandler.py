@@ -98,9 +98,7 @@ def parse(file, printoutput=False, eval_keys=False, eval_values=False):
 		ERROR_TXT_MULTIPLE_WAITING_KEYS = "Multiple keys are waiting for a bracket" + ERROR_TXT_INFO
 
 		split = re.split(r"(?=[\t\n ])\t+|(?=[\t\n ]) ", line.split("//", 1)[0], maxsplit=2)   # Split line
-		for i in range(len(split)):
-			split[i] = split[i].replace("\t","")
-			split[i] = split[i].replace("\n","")
+		for i in range(len(split)): split[i] = split[i].replace("\t","")
 		split = [i for i in split if i != '']
 
 		if printoutput: 
