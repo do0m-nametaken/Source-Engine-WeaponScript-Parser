@@ -29,7 +29,6 @@ def unparse(readdict, repr_keys=True, repr_values=True):
 		else:
 			strtoreturn = (strtoreturn + indent + str(key)
 						 + keyvalueseparator + str(value) + "\n")
-	del indent
 	return strtoreturn
 
 def parse(file, printoutput=False, eval_keys=False, eval_values=False):
